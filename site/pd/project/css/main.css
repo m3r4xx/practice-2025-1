@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+/*первая страничка*/
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+.wrapper{
+    background-color:white;
+    width: 100%;
+    overflow-x: hidden;
+}
+.container{
+    width: 1000px;
+    margin: 0 auto;
+}
+header{
+    padding: 50px 0;
+}
+header .logo, footer .block .logo{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+}
+header nav{
+    float: right;
+    width: 50%;
+}
+header nav ul{
+list-style: none;
+display: flex;
+justify-content: space-between;
+position: relative;
+}
+header nav ul li{
+    display: inline-block;
+}
+header nav ul li a{
+    color: black;
+}
+header nav ul li:not(.active) a:hover{
+border-bottom: 5px solid black;
+}
+header nav ul li.active::after{ 
+content: '';
+display: block;
+width: 45px;
+height: 5px;
+background-color: black;
+border-radius: 10px;
+}
+.hero{
+    padding-bottom: 100px;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+}
+.hero--info{
+    width: 440px;
+    padding-top: 70px;
+    position: relative;
+    margin-left: 50px;
+    z-index: 2;
+}
+.hero--info h2{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+.hero--info h1{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 120%;
+}
+.hero--info p{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%;
+    margin: 30px 0;
+}
+.hero img{
+    position: absolute;
+    top: 0;
+}
+/*вторая страничка*/
+.problems{
+    padding-top: 50px;
+}
+.about h3{
+    font-weight: 600;
+    font-size: 50px;
+}
+.about .see{
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    padding: 12px 23px;
+    float: right;
+    display: block;
+    transition: all 500ms;
+}
+.about .see:hover{
+    transform: scale(1.1);
+}
+.about .problems{
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+.block {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+.block-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 200px; 
+}
+.term {
+    font-weight: 600;
+    font-size: 18px;
+}
+.description {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: black;
+    padding-top: 3px;
+}
+.block img {
+    width: 50px;
+    height: 50px;
+}
+/*третья страничка*/
+.news {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.news h3 {
+    font-weight: 400;
+    font-size: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.magazin {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+.block {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+.block:hover {
+    transform: translateY(-5px);
+}
+.car-image {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: block;
+    margin: 0 auto;
+}
+.block:hover .car-image {
+    transform: scale(1.03);
+}
+.image-caption {
+    display: block;
+    font-size: 28px;
+    font-weight: 500;
+    margin-top: 25px;
+    color: black;
+}
+/*Четвертая*/
+.partner{
+    background: url('/img/polinami.svg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 80px 0;
+}
+.partner p{
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+.partner h3{
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+.partner .info{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.partner .info .block{
+    text-align: center;
+    width: 20%;
+    margin: 30px 2%;
+}
+.partner .info .block img{
+    margin-bottom: 15px;
+}
+/*Заключительная*/
+footer{
+    background: whitesmoke;
+    padding: 50px 0;
+}
+footer .blocks{
+display: flex;
+justify-content: space-between;
+}
+footer .blocks p{
+    width: 300px;
+    margin: 15px 0;
+}
+footer .blocks h4{
+    font-weight: 500;
+    font-size: 17px;
+}
+footer .blocks ul{
+    list-style: none;
+}
+footer .blocks ul li{
+    margin-top: 7px;
+}
+footer > p{
+    text-align: center;
+}
+.animated-button {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 300ms ease;
+    border: none;
+    cursor: pointer;
+}
+.animated-button:hover {
+    transform: scale(1.1);
+}
+.animated-button h4 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.hero-about{
+    position: relative;
+    overflow: hidden;
+}
+.hero-about .info{
+    width: 500px;
+    padding: 150px 0;
+    position: relative;
+    z-index: 2;
+}
+.hero-about .info h1{
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+.hero-about .info .btn{
+    margin-top: 20px;
+    background: black;
+    color: white;
+    border-radius: 50px;
+    padding: 15px 30px;
+    border: 0;
+    transition: all 500ms ease;
+    font-size: 17px;
+}
+.hero-about .info .btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.hero-about img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 600px;
+    height: auto;
+    max-width: 50%;
+    z-index: 1;
+}
